@@ -34,7 +34,7 @@ class _HomeScreenState extends State<HomeScreen> {
       body: _screens[_currentIndex],
       bottomNavigationBar: BottomNavigationBar(
           elevation: 5,
-          backgroundColor: const Color(0xff282A2F),
+          backgroundColor: Colors.black,
           currentIndex: _currentIndex,
           onTap: _updateIndex,
           items: const [
@@ -48,7 +48,7 @@ class _HomeScreenState extends State<HomeScreen> {
             ),
             BottomNavigationBarItem(
               label: 'Add Expense',
-              icon: Icon(color: Colors.white, Icons.person),
+              icon: Icon(Icons.person),
             ),
             BottomNavigationBarItem(
               label: 'Activity',
