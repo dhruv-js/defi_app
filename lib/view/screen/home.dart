@@ -1,3 +1,5 @@
+import 'package:defi_app/view/screen/friends.dart';
+import 'package:defi_app/view/screen/groups.dart';
 import 'package:defi_app/view/screen/login.dart';
 import 'package:flutter/material.dart';
 
@@ -13,8 +15,8 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   int _currentIndex = 0;
   final List _screens = [
-    LoginScreen(),
-    LoginScreen(),
+    const FriendsScreen(),
+    const GroupsScreen(),
     LoginScreen(),
     LoginScreen(),
     LoginScreen()
@@ -35,16 +37,17 @@ class _HomeScreenState extends State<HomeScreen> {
       bottomNavigationBar: BottomNavigationBar(
           elevation: 5,
           backgroundColor: Colors.black,
+          fixedColor: Colors.black,
           currentIndex: _currentIndex,
           onTap: _updateIndex,
           items: const [
             BottomNavigationBarItem(
               label: 'Friends',
-              icon: Icon(color: Colors.white, Icons.person),
+              icon: Icon(Icons.person),
             ),
             BottomNavigationBarItem(
               label: 'Groups',
-              icon: Icon(color: Colors.white, Icons.person),
+              icon: Icon(Icons.person),
             ),
             BottomNavigationBarItem(
               label: 'Add Expense',
@@ -52,11 +55,11 @@ class _HomeScreenState extends State<HomeScreen> {
             ),
             BottomNavigationBarItem(
               label: 'Activity',
-              icon: Icon(color: Colors.white, Icons.person),
+              icon: Icon(Icons.person),
             ),
             BottomNavigationBarItem(
               label: 'Account',
-              icon: Icon(color: Colors.white, Icons.person),
+              icon: Icon(Icons.person),
             ),
           ]),
     );
