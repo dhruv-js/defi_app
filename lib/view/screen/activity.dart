@@ -1,8 +1,6 @@
 import 'package:defi_app/res/colors.dart';
 import 'package:defi_app/view/widget/card_list_view_builder.dart';
-import 'package:defi_app/view/widget/friends_card.dart';
 import 'package:defi_app/view/widget/gradient_background.dart';
-import 'package:defi_app/view/widget/total_balance_card.dart';
 import 'package:flutter/material.dart';
 
 import '../widget/activity_card.dart';
@@ -19,7 +17,7 @@ class ActivityScreen extends StatelessWidget {
       body: Stack(
         children: [
           const GradientContainer(
-            heightRatio: 0.43,
+            heightRatio: 0.28,
           ),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 16.0),
@@ -42,46 +40,47 @@ class ActivityScreen extends StatelessWidget {
                   ),
                 ),
                 CardListViewBuilder(widgets: [
+                  // ShrinkWrappingViewport(offset: ),
                   ActivityCard(
-                      amount: 500,
-                      userIcon: const Icon(
-                        Icons.person,
-                        color: iconColor,
-                      ),
-                      userName: 'Devansh Shah',
-                      callback: () {}),
-                  FriendsCard(
-                      amount: -500,
-                      userIcon: const Icon(
-                        Icons.person,
-                        color: iconColor,
-                      ),
-                      userName: 'Devansh Shah',
-                      callback: () {}),
-                  FriendsCard(
-                      amount: 1000,
-                      userIcon: const Icon(
-                        Icons.person,
-                        color: iconColor,
-                      ),
-                      userName: 'Devansh Shah',
-                      callback: () {}),
-                  FriendsCard(
-                      amount: 100,
-                      userIcon: const Icon(
-                        Icons.person,
-                        color: iconColor,
-                      ),
-                      userName: 'Devansh Shah',
-                      callback: () {}),
-                  FriendsCard(
-                      amount: 200,
-                      userIcon: const Icon(
-                        Icons.person,
-                        color: iconColor,
-                      ),
-                      userName: 'Devansh Shah',
-                      callback: () {}),
+                    amount: 500,
+                    userIcon: const Icon(
+                      Icons.person,
+                      color: iconColor,
+                    ),
+                    userName: 'Devansh Shah',
+                  ),
+                  ActivityCard(
+                    amount: -500,
+                    userIcon: const Icon(
+                      Icons.person,
+                      color: iconColor,
+                    ),
+                    userName: 'Devansh Shah',
+                  ),
+                  ActivityCard(
+                    amount: 1000,
+                    userIcon: const Icon(
+                      Icons.person,
+                      color: iconColor,
+                    ),
+                    userName: 'Devansh Shah',
+                  ),
+                  ActivityCard(
+                    amount: 100,
+                    userIcon: const Icon(
+                      Icons.person,
+                      color: iconColor,
+                    ),
+                    userName: 'Devansh Shah',
+                  ),
+                  ActivityCard(
+                    amount: 200,
+                    userIcon: const Icon(
+                      Icons.person,
+                      color: iconColor,
+                    ),
+                    userName: 'Devansh Shah',
+                  ),
                 ]),
               ],
             ),
