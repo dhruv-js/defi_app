@@ -1,7 +1,9 @@
+import 'package:defi_app/view/screen/activity.dart';
 import 'package:defi_app/view/screen/friends.dart';
 import 'package:defi_app/view/screen/groups.dart';
 import 'package:defi_app/view/screen/login.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 import '../../res/colors.dart';
 
@@ -18,7 +20,7 @@ class _HomeScreenState extends State<HomeScreen> {
     const FriendsScreen(),
     const GroupsScreen(),
     LoginScreen(),
-    LoginScreen(),
+    const ActivityScreen(),
     LoginScreen()
   ];
 
@@ -35,33 +37,37 @@ class _HomeScreenState extends State<HomeScreen> {
       backgroundColor: bgColor,
       body: _screens[_currentIndex],
       bottomNavigationBar: BottomNavigationBar(
-          elevation: 5,
-          backgroundColor: Colors.black,
-          fixedColor: Colors.black,
-          currentIndex: _currentIndex,
-          onTap: _updateIndex,
-          items: const [
-            BottomNavigationBarItem(
-              label: 'Friends',
-              icon: Icon(Icons.person),
-            ),
-            BottomNavigationBarItem(
-              label: 'Groups',
-              icon: Icon(Icons.person),
-            ),
-            BottomNavigationBarItem(
-              label: 'Add Expense',
-              icon: Icon(Icons.person),
-            ),
-            BottomNavigationBarItem(
-              label: 'Activity',
-              icon: Icon(Icons.person),
-            ),
-            BottomNavigationBarItem(
-              label: 'Account',
-              icon: Icon(Icons.person),
-            ),
-          ]),
+        elevation: 5,
+        fixedColor: Colors.white,
+        currentIndex: _currentIndex,
+        onTap: _updateIndex,
+        items: const [
+          BottomNavigationBarItem(
+            label: 'Friends',
+            icon: Icon(Icons.person),
+          ),
+          BottomNavigationBarItem(
+            backgroundColor: cardColor,
+            label: 'Groups',
+            icon: Icon(Icons.group),
+          ),
+          BottomNavigationBarItem(
+            backgroundColor: cardColor,
+            label: 'Add Expense',
+            icon: Icon(Icons.add),
+          ),
+          BottomNavigationBarItem(
+            backgroundColor: cardColor,
+            label: 'Activity',
+            icon: Icon(Icons.pie_chart),
+          ),
+          BottomNavigationBarItem(
+            backgroundColor: cardColor,
+            label: 'Account',
+            icon: Icon(Icons.person),
+          ),
+        ],
+      ),
     );
   }
 }
