@@ -1,8 +1,8 @@
 import 'package:defi_app/res/colors.dart';
 import 'package:flutter/material.dart';
 
-class FriendsCard extends StatelessWidget {
-  const FriendsCard({
+class ActivityCard extends StatelessWidget {
+  const ActivityCard({
     super.key,
     required this.amount,
     required this.userIcon,
@@ -18,20 +18,28 @@ class FriendsCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
-      margin: const EdgeInsets.all(2),
-      color: cardColor,
+      color: const Color(0xff282A2F),
       elevation: 5,
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
       child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 8.0, vertical: 4.0),
         child: Row(children: [
           userIcon,
-          Padding(
-            padding: const EdgeInsets.only(left: 8.0),
-            child: Text(
-              userName,
-              style: const TextStyle(color: iconColor, fontSize: 20),
-            ),
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Padding(
+                padding: const EdgeInsets.only(left: 8.0),
+                child: Text(
+                  userName,
+                  style: const TextStyle(color: iconColor, fontSize: 20),
+                ),
+              ),
+              Text(
+                '\$${amount.abs()}',
+                style: const TextStyle(color: iconColor, fontSize: 15),
+              ),
+            ],
           ),
           const Spacer(),
           Column(
@@ -39,9 +47,6 @@ class FriendsCard extends StatelessWidget {
               Text(
                 amount > 0 ? 'owes you' : 'you owe',
                 style: const TextStyle(color: textColor, fontSize: 15),
-              ),
-              const SizedBox(
-                height: 3,
               ),
               Text(
                 '\$${amount.abs()}',

@@ -35,7 +35,7 @@ class LoginScreen extends StatelessWidget {
                     child: Text(
                       'Sign Up for free',
                       style: TextStyle(
-                          color: Colors.white,
+                          color: iconColor,
                           fontSize: 22,
                           fontWeight: FontWeight.w300),
                     ),
@@ -54,14 +54,14 @@ class LoginScreen extends StatelessWidget {
                         child: Textfield(
                           formControlName: 'name',
                           hint: 'Name',
-                          icon: Icon(color: Colors.white, Icons.person),
+                          icon: Icon(color: iconColor, Icons.person),
                         )),
                     Padding(
                       padding: EdgeInsets.symmetric(vertical: 2.0),
                       child: Textfield(
                         formControlName: 'password',
                         hint: 'Password',
-                        icon: Icon(color: Colors.white, Icons.lock),
+                        icon: Icon(color: iconColor, Icons.lock),
                       ),
                     ),
                   ],

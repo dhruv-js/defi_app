@@ -5,10 +5,11 @@ import 'package:defi_app/view/widget/gradient_background.dart';
 import 'package:defi_app/view/widget/total_balance_card.dart';
 import 'package:flutter/material.dart';
 
+import '../widget/activity_card.dart';
 import '../widget/search_box.dart';
 
-class FriendsScreen extends StatelessWidget {
-  const FriendsScreen({super.key});
+class ActivityScreen extends StatelessWidget {
+  const ActivityScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -32,7 +33,7 @@ class FriendsScreen extends StatelessWidget {
                 const Padding(
                   padding: EdgeInsets.symmetric(vertical: 16.0),
                   child: Text(
-                    'Friends',
+                    'Recent Activity',
                     textAlign: TextAlign.left,
                     style: TextStyle(
                         color: iconColor,
@@ -40,11 +41,8 @@ class FriendsScreen extends StatelessWidget {
                         fontWeight: FontWeight.w400),
                   ),
                 ),
-                const TotalBalanceCard(
-                  amount: 5000.34,
-                ),
                 CardListViewBuilder(widgets: [
-                  FriendsCard(
+                  ActivityCard(
                       amount: 500,
                       userIcon: const Icon(
                         Icons.person,

@@ -1,3 +1,4 @@
+import 'package:defi_app/res/colors.dart';
 import 'package:flutter/material.dart';
 
 class GradientButton extends StatelessWidget {
@@ -27,7 +28,7 @@ class GradientButton extends StatelessWidget {
                 text,
                 textAlign: TextAlign.center,
                 style: const TextStyle(
-                    color: Colors.white,
+                    color: iconColor,
                     fontSize: 20.0,
                     fontWeight: FontWeight.w400),
               ),
