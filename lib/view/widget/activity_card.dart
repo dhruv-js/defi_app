@@ -12,7 +12,7 @@ class ActivityCard extends StatelessWidget {
 
   final String date = DateFormat("yyyy-MM-dd").format(DateTime.now());
   final String time = DateFormat("hh:mm:ss a").format(DateTime.now());
-  final Icon userIcon;
+  final Widget userIcon;
   final String userName;
   final double amount;
 

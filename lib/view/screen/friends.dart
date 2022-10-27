@@ -1,5 +1,6 @@
 import 'package:defi_app/res/colors.dart';
 import 'package:defi_app/view/widget/card_list_view_builder.dart';
+import 'package:defi_app/view/widget/circular_icon.dart';
 import 'package:defi_app/view/widget/friends_card.dart';
 import 'package:defi_app/view/widget/gradient_background.dart';
 import 'package:defi_app/view/widget/total_balance_card.dart';
@@ -43,48 +44,87 @@ class FriendsScreen extends StatelessWidget {
                 const TotalBalanceCard(
                   amount: 5000.34,
                 ),
-                CardListViewBuilder(widgets: [
-                  FriendsCard(
-                      amount: 500,
-                      userIcon: const Icon(
-                        Icons.person,
-                        color: iconColor,
-                      ),
-                      userName: 'Devansh Shah',
-                      callback: () {}),
-                  FriendsCard(
-                      amount: -500,
-                      userIcon: const Icon(
-                        Icons.person,
-                        color: iconColor,
-                      ),
-                      userName: 'Devansh Shah',
-                      callback: () {}),
-                  FriendsCard(
-                      amount: 1000,
-                      userIcon: const Icon(
-                        Icons.person,
-                        color: iconColor,
-                      ),
-                      userName: 'Devansh Shah',
-                      callback: () {}),
-                  FriendsCard(
-                      amount: 100,
-                      userIcon: const Icon(
-                        Icons.person,
-                        color: iconColor,
-                      ),
-                      userName: 'Devansh Shah',
-                      callback: () {}),
-                  FriendsCard(
-                      amount: 200,
-                      userIcon: const Icon(
-                        Icons.person,
-                        color: iconColor,
-                      ),
-                      userName: 'Devansh Shah',
-                      callback: () {}),
-                ]),
+                Expanded(
+                  child: CardListViewBuilder(widgets: [
+                    FriendsCard(
+                        amount: -500,
+                        userIcon: const CircularIcon(
+                          icon: Icon(
+                            Icons.person,
+                            color: Colors.white,
+                          ),
+                          bgColor: Colors.blueGrey,
+                        ),
+                        userName: 'Devansh Shah',
+                        callback: () {}),
+                    FriendsCard(
+                        amount: -500,
+                        userIcon: const CircularIcon(
+                          icon: Icon(
+                            Icons.person,
+                            color: Colors.white,
+                          ),
+                          bgColor: Colors.blueGrey,
+                        ),
+                        userName: 'Devansh Shah',
+                        callback: () {}),
+                    FriendsCard(
+                        amount: -500,
+                        userIcon: const CircularIcon(
+                          icon: Icon(
+                            Icons.person,
+                            color: Colors.white,
+                          ),
+                          bgColor: Colors.blueGrey,
+                        ),
+                        userName: 'Devansh Shah',
+                        callback: () {}),
+                    FriendsCard(
+                        amount: -500,
+                        userIcon: const CircularIcon(
+                          icon: Icon(
+                            Icons.person,
+                            color: Colors.white,
+                          ),
+                          bgColor: Colors.blueGrey,
+                        ),
+                        userName: 'Devansh Shah',
+                        callback: () {}),
+                    FriendsCard(
+                        amount: -500,
+                        userIcon: const CircularIcon(
+                          icon: Icon(
+                            Icons.person,
+                            color: Colors.white,
+                          ),
+                          bgColor: Colors.blueGrey,
+                        ),
+                        userName: 'Devansh Shah',
+                        callback: () {}),
+                    FriendsCard(
+                        amount: -500,
+                        userIcon: const CircularIcon(
+                          icon: Icon(
+                            Icons.person,
+                            color: Colors.white,
+                          ),
+                          bgColor: Colors.blueGrey,
+                        ),
+                        userName: 'Devansh Shah',
+                        callback: () {}),
+                    FriendsCard(
+                        amount: -500,
+                        userIcon: const CircularIcon(
+                          icon: Icon(
+                            Icons.person,
+                            color: Colors.white,
+                          ),
+                          bgColor: Colors.blueGrey,
+                        ),
+                        userName: 'Devansh Shah',
+                        callback: () {}),
+                  ]),
+                ),
               ],
             ),
           )

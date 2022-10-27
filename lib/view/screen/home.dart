@@ -3,7 +3,6 @@ import 'package:defi_app/view/screen/friends.dart';
 import 'package:defi_app/view/screen/groups.dart';
 import 'package:defi_app/view/screen/login.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 
 import '../../res/colors.dart';
 

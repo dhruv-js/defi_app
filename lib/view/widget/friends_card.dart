@@ -10,7 +10,7 @@ class FriendsCard extends StatelessWidget {
     required this.callback,
   });
 
-  final Icon userIcon;
+  final Widget userIcon;
   final String userName;
   final VoidCallback callback;
   final double amount;
