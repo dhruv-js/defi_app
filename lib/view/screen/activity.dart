@@ -22,119 +22,117 @@ class ActivityScreen extends StatelessWidget {
           ),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 16.0),
-            child: Expanded(
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  const Padding(
-                    padding: EdgeInsets.only(top: 64.0, bottom: 8.0),
-                    child: SearchBox(),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                const Padding(
+                  padding: EdgeInsets.only(top: 64.0, bottom: 8.0),
+                  child: SearchBox(),
+                ),
+                const Padding(
+                  padding: EdgeInsets.symmetric(vertical: 16.0),
+                  child: Text(
+                    'Recent Activity',
+                    textAlign: TextAlign.left,
+                    style: TextStyle(
+                        color: iconColor,
+                        fontSize: 30,
+                        fontWeight: FontWeight.w400),
                   ),
-                  const Padding(
-                    padding: EdgeInsets.symmetric(vertical: 16.0),
-                    child: Text(
-                      'Recent Activity',
-                      textAlign: TextAlign.left,
-                      style: TextStyle(
+                ),
+                Expanded(
+                  child: CardListViewBuilder(widgets: [
+                    ActivityCard(
+                      amount: 500,
+                      userIcon: const CircularIcon(
+                        bgColor: Colors.blueGrey,
+                        icon: Icon(
+                          Icons.person,
                           color: iconColor,
-                          fontSize: 30,
-                          fontWeight: FontWeight.w400),
+                        ),
+                      ),
+                      userName: 'Devansh Shah',
                     ),
-                  ),
-                  Expanded(
-                    child: CardListViewBuilder(widgets: [
-                      ActivityCard(
-                        amount: 500,
-                        userIcon: const CircularIcon(
-                          bgColor: Colors.blueGrey,
-                          icon: Icon(
-                            Icons.person,
-                            color: iconColor,
-                          ),
+                    ActivityCard(
+                      amount: 500,
+                      userIcon: const CircularIcon(
+                        bgColor: Colors.blueGrey,
+                        icon: Icon(
+                          Icons.person,
+                          color: iconColor,
                         ),
-                        userName: 'Devansh Shah',
                       ),
-                      ActivityCard(
-                        amount: 500,
-                        userIcon: const CircularIcon(
-                          bgColor: Colors.blueGrey,
-                          icon: Icon(
-                            Icons.person,
-                            color: iconColor,
-                          ),
+                      userName: 'Devansh Shah',
+                    ),
+                    ActivityCard(
+                      amount: 500,
+                      userIcon: const CircularIcon(
+                        bgColor: Colors.blueGrey,
+                        icon: Icon(
+                          Icons.person,
+                          color: iconColor,
                         ),
-                        userName: 'Devansh Shah',
                       ),
-                      ActivityCard(
-                        amount: 500,
-                        userIcon: const CircularIcon(
-                          bgColor: Colors.blueGrey,
-                          icon: Icon(
-                            Icons.person,
-                            color: iconColor,
-                          ),
+                      userName: 'Devansh Shah',
+                    ),
+                    ActivityCard(
+                      amount: 500,
+                      userIcon: const CircularIcon(
+                        bgColor: Colors.blueGrey,
+                        icon: Icon(
+                          Icons.person,
+                          color: iconColor,
                         ),
-                        userName: 'Devansh Shah',
                       ),
-                      ActivityCard(
-                        amount: 500,
-                        userIcon: const CircularIcon(
-                          bgColor: Colors.blueGrey,
-                          icon: Icon(
-                            Icons.person,
-                            color: iconColor,
-                          ),
+                      userName: 'Devansh Shah',
+                    ),
+                    ActivityCard(
+                      amount: 500,
+                      userIcon: const CircularIcon(
+                        bgColor: Colors.blueGrey,
+                        icon: Icon(
+                          Icons.person,
+                          color: iconColor,
                         ),
-                        userName: 'Devansh Shah',
                       ),
-                      ActivityCard(
-                        amount: 500,
-                        userIcon: const CircularIcon(
-                          bgColor: Colors.blueGrey,
-                          icon: Icon(
-                            Icons.person,
-                            color: iconColor,
-                          ),
+                      userName: 'Devansh Shah',
+                    ),
+                    ActivityCard(
+                      amount: 500,
+                      userIcon: const CircularIcon(
+                        bgColor: Colors.blueGrey,
+                        icon: Icon(
+                          Icons.person,
+                          color: iconColor,
                         ),
-                        userName: 'Devansh Shah',
                       ),
-                      ActivityCard(
-                        amount: 500,
-                        userIcon: const CircularIcon(
-                          bgColor: Colors.blueGrey,
-                          icon: Icon(
-                            Icons.person,
-                            color: iconColor,
-                          ),
+                      userName: 'Devansh Shah',
+                    ),
+                    ActivityCard(
+                      amount: 500,
+                      userIcon: const CircularIcon(
+                        bgColor: Colors.blueGrey,
+                        icon: Icon(
+                          Icons.person,
+                          color: iconColor,
                         ),
-                        userName: 'Devansh Shah',
                       ),
-                      ActivityCard(
-                        amount: 500,
-                        userIcon: const CircularIcon(
-                          bgColor: Colors.blueGrey,
-                          icon: Icon(
-                            Icons.person,
-                            color: iconColor,
-                          ),
+                      userName: 'Devansh Shah',
+                    ),
+                    ActivityCard(
+                      amount: 500,
+                      userIcon: const CircularIcon(
+                        bgColor: Colors.blueGrey,
+                        icon: Icon(
+                          Icons.person,
+                          color: iconColor,
                         ),
-                        userName: 'Devansh Shah',
                       ),
-                      ActivityCard(
-                        amount: 500,
-                        userIcon: const CircularIcon(
-                          bgColor: Colors.blueGrey,
-                          icon: Icon(
-                            Icons.person,
-                            color: iconColor,
-                          ),
-                        ),
-                        userName: 'Devansh Shah',
-                      ),
-                    ]),
-                  ),
-                ],
-              ),
+                      userName: 'Devansh Shah',
+                    ),
+                  ]),
+                ),
+              ],
             ),
           )
         ],

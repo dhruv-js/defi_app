@@ -55,7 +55,7 @@ class FriendsScreen extends StatelessWidget {
                           ),
                           bgColor: Colors.blueGrey,
                         ),
-                        userName: 'Devansh Shah',
+                        string: 'Devansh Shah',
                         callback: () {}),
                     FriendsCard(
                         amount: -500,
@@ -66,7 +66,7 @@ class FriendsScreen extends StatelessWidget {
                           ),
                           bgColor: Colors.blueGrey,
                         ),
-                        userName: 'Devansh Shah',
+                        string: 'Devansh Shah',
                         callback: () {}),
                     FriendsCard(
                         amount: -500,
@@ -77,7 +77,7 @@ class FriendsScreen extends StatelessWidget {
                           ),
                           bgColor: Colors.blueGrey,
                         ),
-                        userName: 'Devansh Shah',
+                        string: 'Devansh Shah',
                         callback: () {}),
                     FriendsCard(
                         amount: -500,
@@ -88,7 +88,7 @@ class FriendsScreen extends StatelessWidget {
                           ),
                           bgColor: Colors.blueGrey,
                         ),
-                        userName: 'Devansh Shah',
+                        string: 'Devansh Shah',
                         callback: () {}),
                     FriendsCard(
                         amount: -500,
@@ -99,7 +99,7 @@ class FriendsScreen extends StatelessWidget {
                           ),
                           bgColor: Colors.blueGrey,
                         ),
-                        userName: 'Devansh Shah',
+                        string: 'Devansh Shah',
                         callback: () {}),
                     FriendsCard(
                         amount: -500,
@@ -110,7 +110,7 @@ class FriendsScreen extends StatelessWidget {
                           ),
                           bgColor: Colors.blueGrey,
                         ),
-                        userName: 'Devansh Shah',
+                        string: 'Devansh Shah',
                         callback: () {}),
                     FriendsCard(
                         amount: -500,
@@ -121,7 +121,51 @@ class FriendsScreen extends StatelessWidget {
                           ),
                           bgColor: Colors.blueGrey,
                         ),
-                        userName: 'Devansh Shah',
+                        string: 'Devansh Shah',
+                        callback: () {}),
+                    FriendsCard(
+                        amount: -500,
+                        userIcon: const CircularIcon(
+                          icon: Icon(
+                            Icons.person,
+                            color: Colors.white,
+                          ),
+                          bgColor: Colors.blueGrey,
+                        ),
+                        string: 'Devansh Shah',
+                        callback: () {}),
+                    FriendsCard(
+                        amount: -500,
+                        userIcon: const CircularIcon(
+                          icon: Icon(
+                            Icons.person,
+                            color: Colors.white,
+                          ),
+                          bgColor: Colors.blueGrey,
+                        ),
+                        string: 'Devansh Shah',
+                        callback: () {}),
+                    FriendsCard(
+                        amount: -500,
+                        userIcon: const CircularIcon(
+                          icon: Icon(
+                            Icons.person,
+                            color: Colors.white,
+                          ),
+                          bgColor: Colors.blueGrey,
+                        ),
+                        string: 'Devansh Shah',
+                        callback: () {}),
+                    FriendsCard(
+                        amount: -500,
+                        userIcon: const CircularIcon(
+                          icon: Icon(
+                            Icons.person,
+                            color: Colors.white,
+                          ),
+                          bgColor: Colors.blueGrey,
+                        ),
+                        string: 'Devansh Shah',
                         callback: () {}),
                   ]),
                 ),

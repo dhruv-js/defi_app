@@ -2,6 +2,7 @@ import 'package:defi_app/view/screen/activity.dart';
 import 'package:defi_app/view/screen/friends.dart';
 import 'package:defi_app/view/screen/groups.dart';
 import 'package:defi_app/view/screen/login.dart';
+import 'package:defi_app/view/screen/profile.dart';
 import 'package:flutter/material.dart';
 
 import '../../res/colors.dart';
@@ -20,7 +21,7 @@ class _HomeScreenState extends State<HomeScreen> {
     const GroupsScreen(),
     LoginScreen(),
     const ActivityScreen(),
-    LoginScreen()
+    const ProfileScreen(),
   ];
 
   void _updateIndex(int value) {

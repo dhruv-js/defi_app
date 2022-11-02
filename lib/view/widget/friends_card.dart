@@ -4,16 +4,16 @@ import 'package:flutter/material.dart';
 class FriendsCard extends StatelessWidget {
   const FriendsCard({
     super.key,
-    required this.amount,
-    required this.userIcon,
-    required this.userName,
+    this.amount,
+    this.userIcon,
+    required this.string,
     required this.callback,
   });
 
-  final Widget userIcon;
-  final String userName;
+  final Widget? userIcon;
+  final String string;
   final VoidCallback callback;
-  final double amount;
+  final double? amount;
 
   @override
   Widget build(BuildContext context) {
@@ -25,30 +25,32 @@ class FriendsCard extends StatelessWidget {
       child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 8.0, vertical: 4.0),
         child: Row(children: [
-          userIcon,
+          userIcon ?? const SizedBox(),
           Padding(
             padding: const EdgeInsets.only(left: 8.0),
             child: Text(
-              userName,
+              string,
               style: const TextStyle(color: iconColor, fontSize: 20),
             ),
           ),
           const Spacer(),
-          Column(
-            children: [
-              Text(
-                amount > 0 ? 'owes you' : 'you owe',
-                style: const TextStyle(color: textColor, fontSize: 15),
-              ),
-              const SizedBox(
-                height: 3,
-              ),
-              Text(
-                '\$${amount.abs()}',
-                style: const TextStyle(color: iconColor, fontSize: 15),
-              ),
-            ],
-          ),
+          amount != null
+              ? Column(
+                  children: [
+                    Text(
+                      amount! > 0 ? 'owes you' : 'you owe',
+                      style: const TextStyle(color: textColor, fontSize: 15),
+                    ),
+                    const SizedBox(
+                      height: 3,
+                    ),
+                    Text(
+                      '\$${amount!.abs()}',
+                      style: const TextStyle(color: iconColor, fontSize: 15),
+                    ),
+                  ],
+                )
+              : const SizedBox(),
           IconButton(
               onPressed: callback,
               icon: const Icon(
