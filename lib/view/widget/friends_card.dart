@@ -38,7 +38,7 @@ class FriendsCard extends StatelessWidget {
               ? Column(
                   children: [
                     Text(
-                      amount! > 0 ? 'owes you' : 'you owe',
+                      amount! > 0 ? 'you lent' : 'you owe',
                       style: const TextStyle(color: textColor, fontSize: 15),
                     ),
                     const SizedBox(

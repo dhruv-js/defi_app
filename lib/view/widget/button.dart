@@ -3,16 +3,20 @@ import 'package:flutter/material.dart';
 
 class GradientButton extends StatelessWidget {
   final String text;
-  final VoidCallback callback;
+  final Function onPressed;
 
-  const GradientButton({super.key, required this.text, required this.callback});
+  const GradientButton(
+      {super.key, required this.text, required this.onPressed});
 
   @override
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.all(16.0),
       child: InkWell(
-          onTap: () => callback,
+          onTap: () {
+            onPressed();
+            print('h121ello');
+          },
           child: Container(
             width: MediaQuery.of(context).size.width,
             height: 54.0,

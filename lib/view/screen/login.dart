@@ -70,7 +70,7 @@ class LoginScreen extends StatelessWidget {
             ),
             Padding(
               padding: const EdgeInsets.only(top: 16.0),
-              child: GradientButton(text: 'Sign up', callback: () {}),
+              child: GradientButton(text: 'Sign up', onPressed: () {}),
             )
           ],
         ),

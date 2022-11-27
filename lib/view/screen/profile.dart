@@ -1,11 +1,8 @@
 import 'package:defi_app/res/colors.dart';
-import 'package:defi_app/view/widget/circular_icon.dart';
 import 'package:defi_app/view/widget/friends_card.dart';
 import 'package:defi_app/view/widget/gradient_background.dart';
 import 'package:defi_app/view/widget/profile_card.dart';
 import 'package:flutter/material.dart';
-
-import '../widget/search_box.dart';
 
 class ProfileScreen extends StatelessWidget {
   const ProfileScreen({super.key});
@@ -21,7 +18,7 @@ class ProfileScreen extends StatelessWidget {
           Stack(
             children: [
               const GradientContainer(
-                heightRatio: 0.43,
+                heightRatio: 0.4,
               ),
               Padding(
                 padding: const EdgeInsets.all(16.0),
@@ -29,11 +26,7 @@ class ProfileScreen extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: const [
                     Padding(
-                      padding: EdgeInsets.only(top: 64.0, bottom: 8.0),
-                      child: SearchBox(),
-                    ),
-                    Padding(
-                      padding: EdgeInsets.symmetric(vertical: 16.0),
+                      padding: EdgeInsets.only(top: 80.0, bottom: 16.0),
                       child: Text(
                         'Account',
                         textAlign: TextAlign.left,

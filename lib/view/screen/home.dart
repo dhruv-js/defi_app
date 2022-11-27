@@ -1,11 +1,13 @@
+import 'package:defi_app/utils/constants.dart';
 import 'package:defi_app/view/screen/activity.dart';
 import 'package:defi_app/view/screen/friends.dart';
 import 'package:defi_app/view/screen/groups.dart';
-import 'package:defi_app/view/screen/login.dart';
 import 'package:defi_app/view/screen/profile.dart';
 import 'package:flutter/material.dart';
 
 import '../../res/colors.dart';
+import 'package:http/http.dart';
+import 'package:web3dart/web3dart.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -15,11 +17,14 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
+  Client? httpClient;
+  Web3Client? ethClient;
   int _currentIndex = 0;
-  final List _screens = [
-    const FriendsScreen(),
+  late final List _screens = [
+    FriendsScreen(
+      ethClient: ethClient!,
+    ),
     const GroupsScreen(),
-    LoginScreen(),
     const ActivityScreen(),
     const ProfileScreen(),
   ];
@@ -28,6 +33,13 @@ class _HomeScreenState extends State<HomeScreen> {
     setState(() {
       _currentIndex = value;
     });
+  }
+
+  @override
+  void initState() {
+    httpClient = Client();
+    ethClient = Web3Client(infuraUrl, httpClient!);
+    super.initState();
   }
 
   @override
@@ -50,11 +62,6 @@ class _HomeScreenState extends State<HomeScreen> {
             backgroundColor: cardColor,
             label: 'Groups',
             icon: Icon(Icons.group),
-          ),
-          BottomNavigationBarItem(
-            backgroundColor: cardColor,
-            label: 'Add Expense',
-            icon: Icon(Icons.add),
           ),
           BottomNavigationBarItem(
             backgroundColor: cardColor,

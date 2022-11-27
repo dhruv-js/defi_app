@@ -29,7 +29,7 @@ class TotalBalanceCard extends StatelessWidget {
                     fontWeight: FontWeight.w300),
               ),
               Text(
-                '${amount > 0 ? 'You are owed' : 'You owe'} \$${amount.abs()}',
+                '${amount > 0 ? 'You are owed' : 'You owe'} \$${amount.abs().toStringAsFixed(2)}',
                 style: const TextStyle(
                   fontWeight: FontWeight.w400,
                   color: iconColor,
